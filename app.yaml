@@ -4,7 +4,7 @@ threadsafe: true
 
 handlers:
 - url: /.*
-  script: server.app
-network:
-  forwarded_ports:
-    - 5005/tcp
+  script: main.app
+#network:
+ # forwarded_ports:
+  #  - 443/tcp
