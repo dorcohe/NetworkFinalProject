@@ -21,7 +21,8 @@ server_ip = socket.gethostbyname(socket.gethostname())
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write("Hello World! I'm running...")
+        a = 2**2**2**2**2
+        self.response.write(str(a))
 
     def post(self):
         self.response.headers['Content-Type'] = 'text/plain'
@@ -30,8 +31,6 @@ class MainPage(webapp2.RequestHandler):
         self.response.write(str(self.request.remote_addr) + "\n") #client IP
         self.response.write("2**2**2**2**2 = " + str(result))
         
-
-
 app = webapp2.WSGIApplication([
     ('/', MainPage),
 ], debug=True)
